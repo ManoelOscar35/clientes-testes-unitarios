@@ -1,0 +1,40 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "name": "Manoel Oscar Freire de Carvalho",
+      "email": "manoeloscar557@gmail.com",
+      "age": "36"
+    },
+    {
+      "id": 2,
+      "name": "Tiago Freire Carvalho",
+      "email": "tiagofreire@email.com",
+      "age": "27"
+    },
+    {
+      "id": 3,
+      "name": "Gleide Mary Santos Freire",
+      "email": "gleidemarysantos@gmail.com",
+      "age": "63"
+    },
+    {
+      "id": 4,
+      "name": "Geanny Mary Santos Freire",
+      "email": "geannymary@gmail.com",
+      "age": "64"
+    },
+    {
+      "id": 5,
+      "name": "Gabriel de Jesus",
+      "email": "gabriel@email.com",
+      "age": "63"
+    },
+    {
+      "id": 6,
+      "name": "Clarissa",
+      "email": "clarissa@email.com",
+      "age": "24"
+    }
+  ]
+}

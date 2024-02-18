@@ -1,0 +1,86 @@
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12 custom-margin">
+                <h1 class="title mt-3">Clientes</h1>
+            </div>
+            <div class="col-xs-12 col-lg-12 mt-5">
+                <form [formGroup]="formClientes" (ngSubmit)="save();">
+                    <div class="input-group mb-3">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Nome"
+                        aria-label="Nome"
+                        aria-describedby="nome"
+                        formControlName="name"
+                        />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input
+                        type="email"
+                        class="form-control"
+                        placeholder="E-mail"
+                        aria-label="email"
+                        aria-describedby="email"
+                        formControlName="email"
+                        />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Age"
+                            aria-label="age"
+                            aria-describedby="age"
+                            formControlName="age"
+                        />
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button
+                        class="btn btn-primary"
+                        type="submit"
+                        [disabled]="formClientes.invalid">
+                        Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ng-container *ngIf="clientes.length > 0; else empty">
+                    <table class="table mt-4">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Name</th>
+                                <th>E-mail</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cliente of clientes">
+                                <td>{{cliente.id}}</td>
+                                <td>{{cliente.name}}</td>
+                                <td>{{cliente.email}}</td>
+                                <td>{{cliente.age}}</td>
+                                <td><button class="btn btn-warning" (click)="editar(cliente)">Editar</button></td>
+                                <td><button class="btn btn-danger" (click)="deletar(cliente.id);">Deletar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ng-container>
+                <ng-template #empty>
+                    <div>
+                        <em>Empty</em>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</main>
+  
